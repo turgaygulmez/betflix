@@ -1,4 +1,5 @@
 import Movies from "./movies/";
+import Navigation from "./navigation";
 
 /**
  * Create a singelton service instance to be able to use
@@ -8,6 +9,7 @@ class Service {
   constructor() {
     if (!Service.instance) {
       this.movies = new Movies();
+      this.navigation = new Navigation();
       Service.instance = this;
     }
 

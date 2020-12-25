@@ -1,11 +1,13 @@
 import { combineReducers } from "redux";
 import { reducer as movies } from "../containers/movies/reducer";
+import { reducer as layout } from "../containers/layout/reducer";
 
 import { createStore, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
 
 const reducers = combineReducers({
-  movies
+  movies,
+  layout
 });
 
 const allEnhancers = compose(

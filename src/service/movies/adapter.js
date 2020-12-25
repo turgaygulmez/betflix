@@ -1,7 +1,7 @@
 export const toMovies = (data) => {
   if (data && data.length) {
     return data.map((item) => {
-      return toMovie(item, data[item]);
+      return toMovie(item);
     });
   }
 
