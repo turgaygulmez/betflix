@@ -12,6 +12,6 @@ export default class MovieService extends AxiosService {
   get() {
     return this.httpClient
       .get("/movies")
-      .then((response) => toMovies(response.data));
+      .then((response = {}) => toMovies(response.data));
   }
 }
