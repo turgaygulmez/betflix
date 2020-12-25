@@ -8,7 +8,11 @@ const DefaultLayout = ({ children, navigation }) => {
       <header>
         <Navbar navigation={navigation} />
       </header>
-      <main>
+      <main
+        style={{
+          backgroundImage: `url(images/background.jpg)`
+        }}
+      >
         <section className="main__wrapper">{children}</section>
       </main>
       <Footer />

@@ -1,0 +1,99 @@
+.movie-card-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 1rem;
+
+  @media (min-width: $breakpoint-tablet) {
+    margin: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.movie-card {
+  background: #ffffff;
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  display: inline-block;
+  transition: all 0.5s;
+  cursor: pointer;
+  width: 100%;
+  margin: 0 0 1rem 0;
+
+  @media (min-width: $breakpoint-tablet) {
+    width: 18rem;
+    margin: 1em;
+  }
+
+  &:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.08);
+
+    &__header__image {
+      width: 8rem;
+      height: 8rem;
+    }
+  }
+
+  &__header {
+    padding: 0;
+    margin: 0;
+    height: 24rem;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-size: cover;
+  }
+
+  &__content {
+    padding: 1rem;
+    margin: 0;
+
+    &__head {
+      display: flex;
+      width: 100%;
+      align-items: flex-end;
+      justify-content: space-between;
+
+      &__title,
+      &__ratings {
+        margin: 0;
+      }
+
+      &__title {
+        font-size: 1.25rem;
+      }
+
+      &__ratings {
+        font-size: 1rem;
+      }
+    }
+
+    &__info {
+      display: flex;
+      justify-content: space-between;
+      margin: 1rem 0 0 0;
+
+      &__section {
+        display: flex;
+        flex-direction: column;
+
+        &--right {
+          align-self: flex-end;
+        }
+
+        label {
+          font-size: 0.75rem;
+          margin: 0;
+          color: #8e8e8e;
+        }
+
+        span {
+          font-size: 0.875rem;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}

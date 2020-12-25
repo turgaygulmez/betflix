@@ -1,12 +1,15 @@
 import React from "react";
 import { Link, withRouter } from "react-router-dom";
-import Logo from "../../../../img/logo.png";
 
 const Navbar = ({ navigation, location }) => {
   return (
     <nav className="navigation navbar navbar-expand-lg navbar-light bg-light">
       <Link className="navigation__logo nav-link " to="/">
-        <img className="navigation__logo__image" alt="logo" src={Logo} />
+        <img
+          className="navigation__logo__image"
+          alt="logo"
+          src={`${process.env.PUBLIC_URL}/images/logo.png`}
+        />
       </Link>
       <button
         className="navbar-toggler"
@@ -38,6 +41,20 @@ const Navbar = ({ navigation, location }) => {
               );
             })}
         </ul>
+        <form className="form-inline my-2 my-lg-0">
+          <input
+            className="form-control mr-sm-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button
+            className="btn btn-outline-success my-2 my-sm-0"
+            type="submit"
+          >
+            Search
+          </button>
+        </form>
       </div>
     </nav>
   );

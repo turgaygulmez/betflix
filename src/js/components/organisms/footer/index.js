@@ -25,9 +25,13 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer__social-icon">
         {socialIcons &&
-          socialIcons.map((item) => {
+          socialIcons.map((item, idx) => {
             return (
-              <a className="footer__social-icon__link" href={item.url}>
+              <a
+                key={idx}
+                className="footer__social-icon__link"
+                href={item.url}
+              >
                 <img
                   className="footer__social-icon__img"
                   alt={item.alt}

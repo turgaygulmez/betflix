@@ -1,6 +1,14 @@
 .navigation {
   padding: 0;
 
+  form {
+    margin: 1rem;
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    padding: 0 1rem;
+  }
+
   .navbar-toggler {
     margin: 0 1rem 0 0;
   }

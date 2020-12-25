@@ -1,6 +1,6 @@
 import React from "react";
-import { Switch, Route } from "react-router-dom";
-import { routeList } from "./route-list";
+import { Switch, Route, withRouter } from "react-router-dom";
+import { routeList } from "./routeList";
 import Layout from "../layout";
 
 class Routes extends React.PureComponent {
@@ -25,4 +25,4 @@ class Routes extends React.PureComponent {
   }
 }
 
-export default Routes;
+export default withRouter(Routes);
