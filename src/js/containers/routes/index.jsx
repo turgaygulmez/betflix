@@ -10,6 +10,7 @@ class Routes extends React.PureComponent {
           routeList.map((route) => {
             return (
               <Route
+                key={route.path}
                 exact={route.exact}
                 path={route.path}
                 component={route.component}
