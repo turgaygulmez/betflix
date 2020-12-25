@@ -1,22 +1,34 @@
-import logo from "../../../img/logo.svg";
+import React from "react";
+import { connect } from "react-redux";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Movie page</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { MoviesPage } from "../../components/pages";
+
+import { getMovies } from "./actions";
+import { selectMovies } from "./reducer";
+
+class Movies extends React.PureComponent {
+  componentDidMount() {
+    const { movies, onLoadMovies } = this.props;
+
+    if (movies && !movies.length) {
+      onLoadMovies();
+    }
+  }
+
+  render() {
+    const { movies = [] } = this.props;
+    return <MoviesPage movies={movies} />;
+  }
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    movies: selectMovies(state)
+  };
+};
+
+const mapDispatchToProps = (dispatch) => ({
+  onLoadMovies: () => dispatch(getMovies())
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Movies);
