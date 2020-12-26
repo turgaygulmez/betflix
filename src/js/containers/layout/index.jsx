@@ -3,8 +3,8 @@ import { connect } from "react-redux";
 
 import { DefaultLayout } from "../../components/layouts";
 
-import { getNavigation } from "./actions";
-import { selectNavigation } from "./reducer";
+import { getNavigation } from "../../store/navigation/actions";
+import { selectNavigation } from "../../store/navigation/reducer";
 
 class Layout extends React.PureComponent {
   componentDidMount() {

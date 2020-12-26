@@ -3,8 +3,8 @@ import { connect } from "react-redux";
 
 import { MoviesPage } from "../../components/pages";
 
-import { getMovies } from "./actions";
-import { selectMovies } from "./reducer";
+import { getMovies } from "../../store/movies/actions";
+import { selectMovies } from "../../store/movies/reducer";
 
 class Movies extends React.PureComponent {
   componentDidMount() {

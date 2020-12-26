@@ -12,7 +12,12 @@ export default class NavigationService extends AxiosService {
         url: "/"
       },
       {
-        id: 1,
+        id: 2,
+        title: "Subscribe",
+        url: "/subscribe"
+      },
+      {
+        id: 3,
         title: "About",
         url: "/about-us"
       }

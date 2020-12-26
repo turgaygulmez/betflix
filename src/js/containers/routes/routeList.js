@@ -1,5 +1,5 @@
 import Movies from "../movies";
-import MovieDetails from "../movies/details";
+import MovieDetails from "../movieDetails";
 import AboutUs from "../aboutUs";
 
 export const routeList = [
@@ -15,6 +15,11 @@ export const routeList = [
   },
   {
     path: "/about-us",
+    component: AboutUs,
+    exact: true
+  },
+  {
+    path: "/subscribe",
     component: AboutUs,
     exact: true
   }
