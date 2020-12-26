@@ -1,6 +1,8 @@
-import Movies from "../movies";
-import MovieDetails from "../movieDetails";
-import AboutUs from "../aboutUs";
+import { lazy } from "react";
+
+const Movies = lazy(() => import("../movies"));
+const MovieDetails = lazy(() => import("../movieDetails"));
+const AboutUs = lazy(() => import("../aboutUs"));
 
 export const routeList = [
   {

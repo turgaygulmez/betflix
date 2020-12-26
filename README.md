@@ -1,6 +1,34 @@
-# Getting Started with Create React App
+# Overview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A highly scable, mobile first boilerplate to build up movie website projects.
+
+# Features
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). It was implement with mobile-first approach. Some cool features such as code-splitting, advance search functionality, multi routing, SPA, movie cards are included in the boilerplate.
+
+Additionally it includes the following libraries/packages to implement all the features.
+
+[Redux](https://redux.js.org/) - state management
+
+[React Router Dom](https://reactrouter.com/) - handle routing
+
+[Redux Thunk](https://github.com/reduxjs/redux-thunk) - async actions
+
+[Sass](https://www.npmjs.com/package/node-sass) - CSS with superpowers
+
+[Bootstrap](https://getbootstrap.com/) - Cool styles and components
+
+[Axios](https://getbootstrap.com/) - managing http requests
+
+[Prettier](https://prettier.io/) - clean and pretty code
+
+[Redux Mock Store](https://github.com/reduxjs/redux-mock-store) - to mock redux store
+
+## Enviroment and requirements
+
+- [NodeJS version 12](https://nodejs.org/en/) or higher needs to be installed due to node-sass
+- For better and clean code experience enable VS Code eslint and prettier code formatter extensions
+- run <code>npm run install</code> to install all dependencies
 
 ## Available Scripts
 
@@ -28,43 +56,3 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
