@@ -17,6 +17,7 @@ export const toMovie = (data) => {
     genres: data.genres || [],
     rate: data.rate,
     length: data.length,
-    img: data.img || "placeholder.jpg"
+    img: data.img || "placeholder.jpg",
+    trailer: data.trailer
   };
 };

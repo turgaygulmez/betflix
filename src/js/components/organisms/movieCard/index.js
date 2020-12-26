@@ -1,8 +1,13 @@
 import React from "react";
 
-const MovieCard = ({ movie }) => {
+const MovieCard = ({ movie, onMovieClick }) => {
   return (
-    <div className="movie-card">
+    <div
+      className="movie-card"
+      onClick={() => {
+        onMovieClick(movie);
+      }}
+    >
       <div
         className="movie-card__header"
         style={{

@@ -16,8 +16,15 @@ class Movies extends React.PureComponent {
   }
 
   render() {
-    const { movies = [] } = this.props;
-    return <MoviesPage movies={movies} />;
+    const { movies = [], history } = this.props;
+    return (
+      <MoviesPage
+        movies={movies}
+        onMovieClick={(item) => {
+          history.push(`/movies/${item.id}`);
+        }}
+      />
+    );
   }
 }
 

@@ -10,7 +10,7 @@ const DefaultLayout = ({ children, navigation }) => {
       </header>
       <main
         style={{
-          backgroundImage: `url(images/background.jpg)`
+          backgroundImage: `url(/images/background.jpg)`
         }}
       >
         <section className="main__wrapper">{children}</section>

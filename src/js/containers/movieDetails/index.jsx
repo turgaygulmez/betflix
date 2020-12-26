@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 
-import { MoviesPage } from "../../components/pages";
+import { MovieDetailsPage } from "../../components/pages";
 
 import { getMovies } from "../../store/movies/actions";
 import { selectMovies } from "../../store/movies/reducer";
@@ -16,8 +16,14 @@ class MovieDetails extends React.PureComponent {
   }
 
   render() {
-    const { movies = [] } = this.props;
-    return <MoviesPage movies={movies} />;
+    const { movies = [], match = {} } = this.props;
+    const { params = {} } = match;
+    const id = parseInt(params.id);
+
+    const selectedMovie =
+      movies && movies.length && id ? movies.find((x) => x.id === id) : {};
+
+    return <MovieDetailsPage movie={selectedMovie} />;
   }
 }
 
