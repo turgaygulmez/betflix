@@ -1,7 +1,13 @@
-import { REDUCER_NAME, SET_MOVIES } from "./constants";
+import {
+  REDUCER_NAME,
+  SET_MOVIES,
+  SET_FILTERS,
+  RESET_FILTERS
+} from "./constants";
 
 const initialState = {
-  movies: []
+  movies: [],
+  filters: {}
 };
 
 export const reducer = (state = initialState, action) => {
@@ -10,6 +16,19 @@ export const reducer = (state = initialState, action) => {
       return {
         ...state,
         movies: action.payload
+      };
+    case RESET_FILTERS:
+      return {
+        ...state,
+        filters: initialState.filters
+      };
+    case SET_FILTERS:
+      return {
+        ...state,
+        filters: {
+          ...state.filters,
+          ...action.payload
+        }
       };
     default:
       return state;
@@ -21,3 +40,4 @@ const getState = (state) => {
 };
 
 export const selectMovies = (state) => getState(state).movies;
+export const selectFilters = (state) => getState(state).filters;

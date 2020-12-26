@@ -2,11 +2,11 @@ import React from "react";
 
 import { Navbar, Footer } from "../../organisms";
 
-const DefaultLayout = ({ children, navigation }) => {
+const DefaultLayout = ({ children, navigation, onSetFilters }) => {
   return (
     <div className="layout">
       <header>
-        <Navbar navigation={navigation} />
+        <Navbar navigation={navigation} onSetFilters={onSetFilters} />
       </header>
       <main
         style={{

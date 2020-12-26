@@ -1,11 +1,30 @@
 import React from "react";
 import MovieCard from "../../organisms/movieCard";
+import FilterList from "../../molecules/filterList";
 
-const MoviesPage = ({ movies, onMovieClick }) => {
+const MoviesPage = ({
+  movies,
+  filters,
+  genres,
+  onFilterClick,
+  onMovieClick,
+  onClear
+}) => {
   return (
     <div className="all-movies">
-      <div className="movie-filters"></div>
+      <FilterList
+        genres={genres}
+        filters={filters}
+        onFilterClick={onFilterClick}
+        onClear={onClear}
+      />
       <div className="movie-card-list">
+        {movies && movies.length === 0 && (
+          <p className="movie-card-list__empty">
+            We could not find any movie with your filter
+          </p>
+        )}
+
         {movies &&
           movies.map((item, idx) => {
             return (

@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, withRouter } from "react-router-dom";
 
-const Navbar = ({ navigation, location }) => {
+const Navbar = ({ navigation, location, onSetFilters }) => {
+  const [value, setValue] = useState("");
+
+  const onChange = (event) => {
+    setValue(event.target.value);
+  };
+
   return (
     <nav className="navigation navbar navbar-expand-lg navbar-light bg-light">
       <Link className="navigation__logo nav-link " to="/">
@@ -34,7 +40,7 @@ const Navbar = ({ navigation, location }) => {
                     location.pathname === item.url ? "active" : ""
                   }`}
                 >
-                  <Link className="nav-link" to={item.url}>
+                  <Link className="nav-link navigation__link" to={item.url}>
                     {item.title}
                   </Link>
                 </li>
@@ -47,10 +53,17 @@ const Navbar = ({ navigation, location }) => {
             type="search"
             placeholder="Search"
             aria-label="Search"
+            value={value}
+            onChange={onChange}
           />
           <button
             className="btn btn-outline-success my-2 my-sm-0"
-            type="submit"
+            onClick={(e) => {
+              e.preventDefault();
+              onSetFilters({
+                search: value.toLocaleLowerCase()
+              });
+            }}
           >
             Search
           </button>

@@ -1,5 +1,11 @@
 import Api from "../../../service";
-import { SET_LOADING, SET_ERROR, SET_MOVIES } from "./constants";
+import {
+  SET_LOADING,
+  SET_ERROR,
+  SET_FILTERS,
+  SET_MOVIES,
+  RESET_FILTERS
+} from "./constants";
 
 const setLoading = (payload) => ({
   type: SET_LOADING,
@@ -15,6 +21,16 @@ const setError = (payload) => {
 
 const setMovies = (payload) => ({
   type: SET_MOVIES,
+  payload
+});
+
+export const setFilters = (payload) => ({
+  type: SET_FILTERS,
+  payload
+});
+
+export const resetFilters = (payload) => ({
+  type: RESET_FILTERS,
   payload
 });
 
